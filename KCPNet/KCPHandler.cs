@@ -2,7 +2,7 @@ using System;
 using System.Buffers;
 using System.Net.Sockets.Kcp;
 
-namespace KCPNet_CSharp {
+namespace KCPNet {
     /// <summary>
     /// kcp数据处理器
     /// </summary>
@@ -13,6 +13,12 @@ namespace KCPNet_CSharp {
             using (buffer) {
                 Out(buffer.Memory.Slice(0, avalidLength));
             }
+        }
+
+        public Action<byte[]> Recv;
+
+        public void Recive(byte[] buffer) {
+            Recv(buffer);
         }
     }
 }

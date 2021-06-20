@@ -5,4 +5,9 @@
         <TargetFramework>net5.0</TargetFramework>
     </PropertyGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\KCPDemoProtocol\KCPDemoProtocol.csproj" />
+      <ProjectReference Include="..\KCPNet\KCPNet.csproj" />
+    </ItemGroup>
+
 </Project>
